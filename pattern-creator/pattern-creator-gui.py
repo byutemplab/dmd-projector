@@ -368,9 +368,9 @@ class PlotCanvas(FigureCanvas):
 
     def plot(self):
         # Set initial parameters
-        self.point_color = "green"
+        self.point_color = "red"
         self.point_diameter = 25
-        self.points_x = 10
+        self.points_x = 20
         self.points_y = 10
         self.offset_x = 0
         self.offset_y = 0
