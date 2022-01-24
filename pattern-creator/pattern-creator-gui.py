@@ -1,6 +1,6 @@
 import sys
 
-from PyQt5.QtWidgets import QApplication, QMainWindow, QMenu, QVBoxLayout, QSizePolicy, QMessageBox, QWidget, QPushButton, QComboBox, QSpinBox, QGraphicsDropShadowEffect
+from PyQt5.QtWidgets import QApplication, QSizePolicy, QWidget, QPushButton, QComboBox, QSpinBox, QGraphicsDropShadowEffect
 from PyQt5.QtGui import QIcon, QColor
 from PyQt5 import QtWidgets, QtGui, QtCore
 
@@ -12,8 +12,6 @@ import matplotlib.colors
 
 import pycrafter6500 as projector
 import numpy as np
-
-import scipy.misc
 from skimage.draw import line, disk, rectangle
 
 RES_Y = 1920
@@ -204,8 +202,6 @@ class App(TabWidget):
         self.camera_tab = QWidget()
         self.addTab(self.projector_tab, QIcon(
             "icons/projector-icon.png"), "DMD Projector")
-        self.addTab(self.camera_tab, QIcon(
-            "icons/camera-icon.png"), "  Heliotis Camera")
 
         # Tab header
         font = QtGui.QFont()
@@ -293,8 +289,8 @@ class App(TabWidget):
 
         # Color Selection
         color_input = QComboBox(self)
-        color_input.addItem("green")
         color_input.addItem("red")
+        color_input.addItem("green")
         color_input.addItem("blue")
         color_input.addItem("white")
         color_input.move(160, 500)
