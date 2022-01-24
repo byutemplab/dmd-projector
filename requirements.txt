@@ -1,0 +1,5 @@
+numpy==1.21.4
+PyQt5==5.15.4
+matplotlib==3.4.3
+scikit-image==0.18.3
+pyusb==1.2.1
